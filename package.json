@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/OdieD8/costco-run/issues"
   },
-  "homepage": "https://github.com/OdieD8/costco-run#readme"
+  "homepage": "https://github.com/OdieD8/costco-run#readme",
+  "dependencies": {
+    "firebase": "^2.4.1"
+  }
 }
