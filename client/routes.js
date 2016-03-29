@@ -1,4 +1,6 @@
-angular.module("app", ["ui.router"]).config(function($urlRouterProvider, $stateProvider) {
+angular.module("app", ["ui.router", "firebase"])
+.constant("fb", {url: "https://costco-run.firebaseio.com/"})
+.config(function($urlRouterProvider, $stateProvider) {
 	
 	$stateProvider
 	
