@@ -1,28 +1,13 @@
 /* global Firebase */
-angular.module("app").controller("loginController", function($scope, $firebaseObject, $firebaseArray, $state) {
+angular.module("app").controller("loginController", function($scope, $firebaseObject, $firebaseArray, $state, userService) {
 
 	var ref = new Firebase("https://costco-run.firebaseio.com/");
-
+	
 	$scope.login = function() {
-		ref.authWithPassword({
-
-			email: $scope.user.email,
-			password: $scope.user.password
-		}, function(error, authData) {
-
-			if (error) {
-				console.log("Login Failed!", error);
-
-			} else {
-				console.log("Authentication successful");
-				$state.go('home');
-			}
-
-			$scope.authData = authData;
-			console.log(authData);
-		}, {
-
-			remember: "sessiononly"
-		});
-	};
+		
+		var email = $scope.user.email;
+		var password = $scope.user.password;
+		
+		userService.login(ref, email, password);
+	}
 });

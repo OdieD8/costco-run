@@ -1,0 +1,21 @@
+    <section class="row">
+        <button class="btn btn-info" ng-click="logout()">Logout</button>
+        <header>
+            <h1 class="text-center">Add Item To List</h1>
+            <form ng-submit="addItem()">
+                <input class="form-control"" placeholder="What needs to be done?" ng-model="newItem" autofocus>
+            </form>
+        </header>
+        <section>
+            <h3>Current List</h3>
+            <p>Double-Click To Edit</p>
+            <div class="list-group">
+                <div ng-repeat="item in list" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <label>{{item.title}}</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
