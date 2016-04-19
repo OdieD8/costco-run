@@ -16,8 +16,8 @@ app.use(express.static("client"));
 
 // Endpoints
 
-//Connections
-var port = process.env.PORT;
+// Connections
+var port = process.env.PORT || 8500;
 app.listen(port, function() {
 	console.log("listening on port: ", port);
 });
