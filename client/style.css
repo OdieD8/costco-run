@@ -1,6 +1,5 @@
 .container {
-	Width: 300px;
-	Height: 400px;
+	Width: 275px;
 	border-radius: 5%;
 	padding: 5px 15px 0px 15px;
 	margin-right: auto;
@@ -55,4 +54,24 @@
 
 .footer-link:hover {
     color: indianred;
+}
+
+.form-control {
+	text-align: center;
+	padding: 10px 5px;
+	width: 200px;
+	margin: 15px 0px;
+	background-color: white;
+}
+
+.logout-button {
+	margin: 15px 0px;
+	padding: 10px 15px;
+	width: 270px;
+	font-size: 20px;
+	border-radius: 5%;
+}
+.list-group {
+	margin: 0 auto;
+	text-align: left;
 }
