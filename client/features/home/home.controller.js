@@ -18,11 +18,14 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
         $state.go("login");
     };
 
-    $scope.bakery = $firebaseArray(bakery);
+      $scope.bakery = $firebaseArray(bakery);
+	$scope.cannedGoods = $firebaseArray(cannedGoods);
+	$scope.dairy = $firebaseArray(dairy);
 	$scope.drinks = $firebaseArray(drinks);
-	$scope.cheeseMeat = $firebaseArray(cheeseMeat);
+	$scope.meat = $firebaseArray(meat);
 	$scope.frozen = $firebaseArray(frozen);
 	$scope.fruitVegetables = $firebaseArray(fruitVegetables);
+	$scope.grains = $firebaseArray(grains);
 	$scope.paperCleaningProds = $firebaseArray(paperCleaningProds);
 	$scope.snacksChipsCandy = $firebaseArray(snacksChipsCandy);
 	$scope.other = $firebaseArray(other);
@@ -50,6 +53,27 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 		}
 
+		if ($scope.dropDown === "Canned Goods") {
+
+			$scope.cannedGoods.$add({
+
+				title: newItem,
+				category: "canned goods",
+				completed: false
+			});
+
+		}
+
+		if ($scope.dropDown === "Dairy") {
+
+			$scope.dairy.$add({
+
+				title: newItem,
+				category: "dairy",
+				completed: false
+			});
+		}
+
 		if ($scope.dropDown === "Drinks") {
 
 			$scope.drinks.$add({
@@ -60,12 +84,12 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 			});
 		}
 
-		if ($scope.dropDown === "Cheese/Meat") {
+		if ($scope.dropDown === "Meat") {
 
-			$scope.cheeseMeat.$add({
+			$scope.meat.$add({
 
 				title: newItem,
-				category: "cheeseMeat",
+				category: "meat",
 				completed: false
 			});
 
@@ -87,6 +111,17 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "fruitVegetables",
+				completed: false
+			});
+
+		}
+
+		if ($scope.dropDown === "Grains") {
+
+			$scope.grains.$add({
+
+				title: newItem,
+				category: "grains",
 				completed: false
 			});
 
@@ -134,14 +169,24 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 			$scope.bakery.$remove(item);
 		}
 
+		if (item.category === "canned goods") {
+
+			$scope.cannedGoods.$remove(item);
+		}
+
+		if (item.category === "dairy") {
+
+			$scope.dairy.$remove(item);
+		}
+
 		if (item.category === "drinks") {
 
 			$scope.drinks.$remove(item);
 		}
 
-		if (item.category === "cheeseMeat") {
+		if (item.category === "meat") {
 
-			$scope.cheeseMeat.$remove(item);
+			$scope.meat.$remove(item);
 		}
 
 		if (item.category === "frozen") {
@@ -152,6 +197,11 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 		if (item.category === "fruitVegetables") {
 
 			$scope.fruitVegetables.$remove(item);
+		}
+
+		if (item.category === "grains") {
+
+			$scope.grains.$remove(item);
 		}
 
 		if (item.category ==="paperCleaningProds") {

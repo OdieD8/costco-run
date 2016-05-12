@@ -8,10 +8,13 @@
 					<select class="form-control input-lg" id="category" ng-model="dropDown" ng-change="addItem()" placeholder="">
 					  <option>Select Category</option>
 					  <option value="Bakery">Bakery</option>
+					  <option value="Canned Goods">Canned Goods</option>
+					  <option value="Dairy">Dairy</option>
 					  <option value="Drinks">Drinks</option>
-					  <option value="Cheese/Meat">Cheese/Meat</option>
 					  <option value="Frozen">Frozen</option>
 					  <option value="Fruit/Vegetables">Fruit/Vegetables</option>
+				      <option value="Grains">Grains</option>
+					  <option value="Meat">Meat</option>
 					  <option value="Paper/CleaningProds">Paper/Cleaning Products</option>
 					  <option value="Snacks/Chips/Candy">Snacks/Chips/Candy</option>
 					  <option value="Other">Other</option>
@@ -20,88 +23,121 @@
             </form>
         </header>
         <section ng-hide="bakery.length === 0">
-            <h3>Bakery</h3>
+            <h3>BAKERY</h3>
             <div class="list-group">
                 <div ng-repeat="item in bakery track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="cannedGoods.length === 0">
+            <h3>CANNED GOODS</h3>
+            <div class="list-group">
+                <div ng-repeat="item in cannedGoods track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="dairy.length === 0">
+            <h3>DAIRY</h3>
+            <div class="list-group">
+                <div ng-repeat="item in dairy track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
             </div>
         </section>
 		<section ng-hide="drinks.length === 0">
-            <h3>Drinks</h3>
+            <h3>DRINKS</h3>
             <div class="list-group">
                 <div ng-repeat="item in drinks track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
-                        <label class="item-list">{{item.title}}<br></label><br>
-                    </div>
-                </div>
-            </div>
-        </section>
-		<section ng-hide="cheeseMeat.length === 0">
-            <h3>Cheese/Meat</h3>
-            <div class="list-group">
-                <div ng-repeat="item in cheeseMeat track by $index" class="list-group-item">
-                    <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
             </div>
         </section>
 		<section ng-hide="frozen.length === 0">
-            <h3>Frozen</h3>
+            <h3>FROZEN</h3>
             <div class="list-group">
                 <div ng-repeat="item in frozen track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
             </div>
         </section>
 		<section ng-hide="fruitVegetables.length === 0">
-            <h3>Fruit/Vegetables</h3>
+            <h3>FRUIT/VEGETABLES</h3>
             <div class="list-group">
                 <div ng-repeat="item in fruitVegetables track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="grains.length === 0">
+            <h3>GRAINS</h3>
+            <div class="list-group">
+                <div ng-repeat="item in grains track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="meat.length === 0">
+            <h3>MEAT</h3>
+            <div class="list-group">
+                <div ng-repeat="item in meat track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
             </div>
         </section>
 		<section ng-hide="paperCleaningProds.length === 0">
-            <h3>Paper/Cleaning Products</h3>
+            <h3>PAPER/CLEANING PRODUCTS</h3>
             <div class="list-group">
                 <div ng-repeat="item in paperCleaningProds track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
             </div>
         </section>
 		<section ng-hide="snacksChipsCandy.length === 0">
-            <h3>Snacks/Chips/Candy</h3>
+            <h3>SNACKS/CHIPS/CANDY</h3>
             <div class="list-group">
                 <div ng-repeat="item in snacksChipsCandy track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
             </div>
         </section>
 		<section ng-hide="other.length === 0">
-            <h3>Other</h3>
+            <h3>OTHER</h3>
             <div class="list-group">
                 <div ng-repeat="item in other track by $index" class="list-group-item">
                     <div class="view">
-                        <button class="btn btn-danger pull-right" ng-click="removeItem(item)">X</button>
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
                     </div>
                 </div>
