@@ -6,10 +6,10 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 	var cannedGoods = new Firebase("https://costco-run.firebaseio.com/CannedGoods");
 	var dairy = new Firebase("https://costco-run.firebaseio.com/Dairy");
 	var drinks = new Firebase("https://costco-run.firebaseio.com/Drinks");
-    var cheeseMeat = new Firebase("https://costco-run.firebaseio.com/CheeseMeat");
 	var frozen = new Firebase("https://costco-run.firebaseio.com/Frozen");
 	var fruitVegetables = new Firebase("https://costco-run.firebaseio.com/FruitVegetables");
 	var grains = new Firebase("https://costco-run.firebaseio.com/grains");
+	var meat = new Firebase("https://costco-run.firebaseio.com/meat");
 	var paperCleaningProds = new Firebase("https://costco-run.firebaseio.com/PaperCleaningProds");
 	var snacksChipsCandy = new Firebase("https://costco-run.firebaseio.com/SnacksChipsCandy");
 	var other = new Firebase("https://costco-run.firebaseio.com/Other");
