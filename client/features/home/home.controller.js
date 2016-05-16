@@ -42,6 +42,8 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
         if (!newItem.length) {
 
 			alert("Please enter item");
+			$scope.dropDown = "Select Category";
+    		$scope.newItem = "";
             return;
         }
 
