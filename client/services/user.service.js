@@ -26,4 +26,4 @@ angular.module("app").service("userService", function($firebaseObject, $firebase
         ref.unauth();
         $state.go("login");
     };
-})
+});
