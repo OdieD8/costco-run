@@ -14,6 +14,7 @@ angular.module("app").service("userService", function($firebaseObject, $firebase
 			}
 			else {
 				$state.go("home");
+				sessionStorage.setItem("user", authData.password.email);
 			}
 		}, {
 

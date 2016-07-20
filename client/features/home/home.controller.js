@@ -21,6 +21,63 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
         $state.go("login");
     };
 
+	user = sessionStorage.getItem("user");
+
+	switch (user) {
+
+		case "odie.demoura@shipsource.com":
+			user = "Odie";
+			break;
+
+		case "eric.bulloch@shipsource.com":
+			user = "Eric";
+			break;
+
+		case "g.singh@shipsource.com":
+			user = "G-Money";
+			break;
+
+		case "royal@movemethod.com":
+			user = "Royal";
+			break;
+
+		case "colton@movemethod.com":
+			user = "Colton";
+			break;
+
+		case "ty@movemethod.com":
+			user = "Silky Johnston";
+			break;
+
+		case "brennon@movemethod.com":
+			user = "Brennon";
+			break;
+
+		case "berg@movemethod.com":
+			user = "Berg";
+			break;
+
+		case "wade@movemethod.com":
+			user = "Wade";
+			break;
+
+		case "frank@movemethod.com":
+			user = "Frank";
+			break;
+
+		case "ryan@movemethod.com":
+			user = "Ryan";
+			break;
+
+		case "seth@movemethod.com":
+			user = "Sete";
+			break;
+
+		case "@movemethod.com":
+			user = "";
+			break;
+	}
+
     $scope.bakery = $firebaseArray(bakery);
 	$scope.cannedGoods = $firebaseArray(cannedGoods);
 	$scope.dairy = $firebaseArray(dairy);
@@ -53,6 +110,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "bakery",
+				user: user,
 				completed: false
 			});
 
@@ -64,6 +122,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "canned goods",
+				user: user,
 				completed: false
 			});
 
@@ -75,6 +134,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "dairy",
+				user: user,
 				completed: false
 			});
 		}
@@ -85,6 +145,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "drinks",
+				user: user,
 				completed: false
 			});
 		}
@@ -95,6 +156,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "meat",
+				user: user,
 				completed: false
 			});
 
@@ -106,6 +168,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "frozen",
+				user: user,
 				completed: false
 			});
 		}
@@ -116,6 +179,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "fruitVegetables",
+				user: user,
 				completed: false
 			});
 
@@ -127,6 +191,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "grains",
+				user: user,
 				completed: false
 			});
 
@@ -138,6 +203,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "paperCleaningProds",
+				user: user,
 				completed: false
 			});
 		}
@@ -148,6 +214,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "snacksChipsCandy",
+				user: user,
 				completed: false
 			});
 
@@ -159,6 +226,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 
 				title: newItem,
 				category: "other",
+				user: user,
 				completed: false
 			});
 		}
