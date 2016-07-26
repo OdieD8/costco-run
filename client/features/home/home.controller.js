@@ -230,7 +230,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				completed: false
 			});
 		}
-
 		$scope.dropDown = "Select Category";
         $scope.newItem = "";
     };
