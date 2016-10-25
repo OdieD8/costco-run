@@ -72,6 +72,12 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 		case "seth@movemethod.com":
 			user = "Sete";
 			break;
+
+		case "rwarnick@essentialhub.com":
+			user = "Warnick";
+			break;
+		default:
+			user = "guest";
 	}
 
     $scope.bakery = $firebaseArray(bakery);
