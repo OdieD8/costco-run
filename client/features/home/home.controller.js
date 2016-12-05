@@ -21,6 +21,11 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
         $state.go("login");
     };
 
+	if (user === "brennon@movemethod.com") {
+		alert("Privileges suspended, please see Colton & Royal for approval");
+		$state.go("login");
+	}
+
 	user = sessionStorage.getItem("user");
 
 	switch (user) {
@@ -49,9 +54,9 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 			user = "Silky Johnston";
 			break;
 
-		case "brennon@movemethod.com":
-			user = "Brennon";
-			break;
+		//case "brennon@movemethod.com":
+		//	user = "Brennon";
+		//	break;
 
 		case "berg@movemethod.com":
 			user = "Berg";
@@ -76,6 +81,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 		case "rwarnick@essentialhub.com":
 			user = "Warnick";
 			break;
+			
 		default:
 			user = "guest";
 	}
