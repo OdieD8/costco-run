@@ -21,12 +21,12 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
         $state.go("login");
     };
 
+	user = sessionStorage.getItem("user");
+
 	if (user === "brennon@movemethod.com") {
 		alert("Privileges suspended, please see Colton & Royal for approval");
 		$state.go("login");
 	}
-
-	user = sessionStorage.getItem("user");
 
 	switch (user) {
 
