@@ -86,10 +86,10 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 			user = "guest";
 	}
 
-	if (user === "guest") {
-        alert("Please Login");
-		userService.logout(ref);
-    };
+	// if (user === "guest") {
+    //     alert("Please Login");
+	// 	userService.logout(ref);
+    // };
 
     $scope.bakery = $firebaseArray(bakery);
 	$scope.cannedGoods = $firebaseArray(cannedGoods);
