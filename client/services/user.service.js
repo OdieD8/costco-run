@@ -22,7 +22,7 @@ angular.module("app").service("userService", function($firebaseObject, $firebase
 
 	this.logout = function(ref) {
 
-        $state.go("login");
 		ref.unauth();
+        $state.go("login");
     };
 });
