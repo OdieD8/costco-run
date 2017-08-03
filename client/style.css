@@ -4,10 +4,15 @@
 	padding: 5px 15px 0px 15px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: darkslategray;
-	color: white;
+	background-color: white;
+	border: 1px solid darkslategray; 
+	color: black;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:hover {
+	background-color: indianred;
 }
 
 #input-email {
@@ -40,7 +45,7 @@
 .footer-link:link {
     margin: 5px;
     font-weight: bold;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
