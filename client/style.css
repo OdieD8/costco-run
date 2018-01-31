@@ -1,20 +1,25 @@
 .container {
-	Width: 275px;
+	width: 275px;
 	border-radius: 5%;
 	padding: 5px 15px 0px 15px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: darkslategray;
-	color: white;
+	background-color: white;
+	border: 1px solid darkslategray; 
+	color: black;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:hover {
+	background-color: indianred;
 }
 
 #input-email {
 	text-align: center;
 	padding: 10px 5px;
 	width: 200px;
-	margin: 15px 0px;
+	margin: 15px 10px;
 	background-color: white;
 }
 
@@ -22,7 +27,7 @@
 	text-align: center;
 	padding: 10px 5px;
 	width: 200px;
-	margin: 15px 0px;
+	margin: 15px 10px;
 	background-color: white;
 }
 
@@ -40,7 +45,7 @@
 .footer-link:link {
     margin: 5px;
     font-weight: bold;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -86,4 +91,10 @@ h3 {
 	color: black;
 	padding: 5px;
 	background-color: lightgreen;
+}
+
+@media (max-width: 950px) {
+	.container {
+		width: 275px;
+	}
 }
