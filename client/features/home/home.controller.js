@@ -34,10 +34,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 			user = "Odie";
 			break;
 
-		case "eric.bulloch@shipsource.com":
-			user = "Eric";
-			break;
-
 		case "g.singh@shipsource.com":
 			user = "G-Money";
 			break;
@@ -50,12 +46,8 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 			user = "Colton";
 			break;
 
-		case "ty@movemethod.com":
-			user = "Silky Johnston";
-			break;
-
-		case "brennon@movemethod.com":
-			user = "Brennon";
+		case "gene@movemethod.com":
+			user = "Gene";
 			break;
 
 		case "berg@movemethod.com":
