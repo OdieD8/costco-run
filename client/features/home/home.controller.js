@@ -125,7 +125,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				user: user,
 				completed: false
 			});
-
 		}
 
 		if ($scope.dropDown === "Dairy") {
@@ -159,7 +158,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				user: user,
 				completed: false
 			});
-
 		}
 
 		if ($scope.dropDown === "Frozen") {
@@ -182,7 +180,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				user: user,
 				completed: false
 			});
-
 		}
 
 		if ($scope.dropDown === "Grains") {
@@ -194,7 +191,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				user: user,
 				completed: false
 			});
-
 		}
 
 		if ($scope.dropDown === "Paper/CleaningProds") {
@@ -217,7 +213,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				user: user,
 				completed: false
 			});
-
 		}
 
 		if ($scope.dropDown === "Other") {
@@ -230,7 +225,6 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
 				completed: false
 			});
 		}
-
 		$scope.dropDown = "Select Category";
         $scope.newItem = "";
     };
@@ -238,7 +232,7 @@ angular.module("app").controller("homeController", function($scope, $firebaseObj
     $scope.removeItem = function(item){
 
 		if (item.category === "bakery") {
-
+			
 			$scope.bakery.$remove(item);
 		}
 
